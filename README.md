@@ -1,11 +1,28 @@
 # 💇‍♀️ AI-Powered Salon Website with Appointment Booking & Hairstyle Recommendations
 
 🚀 An interactive, AI-enhanced salon booking system designed for a seamless customer experience with:
-✔ AI-powered hairstyle recommendations personalized for each user
-✔ Online appointment scheduling with automated data handling
-✔ A sleek, responsive UI with an animated salon gallery
+- ✔ AI-powered hairstyle recommendations personalized for each user
+- ✔ Online appointment scheduling with automated data handling
+- ✔ A sleek, responsive UI with an animated salon gallery
 
 This project blends AI, modern web technologies, and intuitive design to showcase expertise in Product Management, Technical Program Management (TPM), and Front-End Development.
+
+---
+
+# 🌟 Website Showcase
+Here are some screenshots of the website in action:
+
+![Home Page](screenshots/homepage.png)
+
+![Appointment Booking](screenshots/appointment-booking.png)
+
+![Services](screenshots/services.png)
+
+![AI Recommendation](screenshots/ai-recommendation.png)
+
+![Carousel](screenshots/carousel.png)
+
+---
 
 ## 📂 Technologies Used
 
