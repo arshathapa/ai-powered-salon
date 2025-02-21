@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon & Academy</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <!-- 🌟 Hero Section with Background Image -->
+    <section id="hero">
+        <div class="hero-content">
+            <img src="images/logo.jpg" alt="Salon Logo" class="salon-logo">
+            <h1>Beauty Salon & Academy</h1>
+            <p class="tagline">Luxury, Glamour, & Confidence</p>
+            
+            <button class="btn-book" onclick="showBooking()">Book an Appointment</button>
+
+            <!-- 📍 Address & Contact -->
+            <div class="hero-contact">
+                <p><strong>📍 Address:</strong> 123 Beauty Street, City, Country</p>
+                <p><strong>📞 Contact:</strong> <a href="tel:+1234567890">+1 234-567-890</a></p>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/your-business" target="_blank">
+                    <img src="images/instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@your-business" target="_blank">
+                    <img src="images/tiktok_icon.png" alt="TikTok">
+                </a>
+                <a href="https://www.facebook.com/your-business" target="_blank">
+                    <img src="images/facebook_icon.svg" alt="Facebook">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ✨ Our Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">💇‍♀️ Hair Styling</div>
+            <div class="service-card">💆‍♀️ Facial & Skin Care</div>
+            <div class="service-card">💅 Manicure & Pedicure</div>
+            <div class="service-card">👰 Bridal Makeup</div>
+        </div>    
+            <div class="service-grid">
+                <div class="service-card">💄 Professional Makeup</div>
+                <div class="service-card">✂ Advanced Haircutting</div>
+                <div class="service-card">💆 Skincare & Facial Training</div>
+                <div class="service-card">📚 Nail Art & Extensions</div>
+            </div>
+    </section>
+
+    <!-- 🎓 Our Courses Section -->
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <div class="service-grid">
+            <div class="service-card">💄 Professional Makeup</div>
+            <div class="service-card">✂ Advanced Haircutting</div>
+            <div class="service-card">💆 Skincare & Facial Training</div>
+            <div class="service-card">📚 Nail Art & Extensions</div>
+        </div>
+        <div class="service-grid">
+            <div class="service-card">💄 Professional Makeup</div>
+            <div class="service-card">✂ Advanced Haircutting</div>
+            <div class="service-card">💆 Skincare & Facial Training</div>
+            <div class="service-card">📚 Nail Art & Extensions</div>
+        </div>
+    </section>
+
+    <section>
+        <div class="ai-hairstyle-container">
+            <h3>Find the Best Hairstyle for You!</h3>
+            <label for="faceShape">Your Face Shape</label>
+            <select id="faceShape">
+                <option value="oval">Oval</option>
+                <option value="round">Round</option>
+                <option value="square">Square</option>
+                <option value="heart">Heart</option>
+                <option value="diamond">Diamond</option>
+            </select>
+            <button class="ai-button" onclick="getHairstyleRecommendation()">Suggest Hairstyle</button>
+        </div>
+
+    <!-- 🌟 AI Hairstyle Recommendation Modal (Pop-Up) -->
+        <div id="aiModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span> <!-- ❌ Close Button -->
+                <h3 style="color: #121212">AI Recommendation</h3>
+                <p id="aiResponse">Your recommended hairstyle will appear here.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 🖼️ Gallery Section -->
+    <section id="gallery">
+        <h2>Salon Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-track">
+                <img src="images/image2.jpg" alt="Salon Interior">
+                <img src="images/image3.jpg" alt="Haircut Station">
+                <img src="images/image4.jpg" alt="Makeup Studio">
+                <img src="images/image5.jpg" alt="Nail Art Station">
+                <img src="images/image6.jpg" alt="Bridal Styling">
+                <img src="images/image7.jpg" alt="Hair Wash Station">
+                <!-- Duplicates for seamless looping -->
+                <img src="images/image2.jpg" alt="Salon Interior">
+                <img src="images/image3.jpg" alt="Haircut Station">
+                <img src="images/image4.jpg" alt="Makeup Studio">
+            </div>
+        </div>
+    </section>
+
+    <!-- 🌸 Appointment Booking Popup -->
+    <div id="booking-popup" class="hidden">
+        <div class="booking-container">
+            <button class="btn-close" onclick="document.getElementById('booking-popup').style.visibility='hidden'; document.getElementById('booking-popup').style.opacity='0';">✖</button>
+            
+            <h3>Book An Appointment</h3>
+
+            <label for="userName">Full Name</label>
+            <input type="text" id="userName" placeholder="Enter your name">
+            <small class="error-message" id="nameError"></small>
+
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" placeholder="Enter your email">
+            <small class="error-message" id="emailError"></small>
+
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" placeholder="Enter your phone number">
+            <small class="error-message" id="phoneError"></small>
+
+            <label for="datePicker">Select Date</label>
+            <input type="date" id="datePicker">
+            <small class="error-message" id="dateError"></small>
+
+            <label for="service">Service</label>
+            <select id="service">
+                <option value="" disabled selected>Select a service</option>
+                <option value="Hair Styling">Hair Styling</option>
+                <option value="Facial & Skin Care">Facial & Skin Care</option>
+                <option value="Manicure & Pedicure">Manicure & Pedicure</option>
+                <option value="Bridal Makeup">Bridal Makeup</option>
+                <option value="Beauty Courses">Beauty Courses</option>
+            </select>
+            <small class="error-message" id="serviceError"></small>
+
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" placeholder="Any additional requests or concerns"></textarea>
+
+            <button class="btn-confirm" onclick="confirmBooking()">Confirm Appointment</button>
+        </div>
+    </div>
+</body>
+
+<!-- 🌸 General Footer -->
+<footer id="footer">
+    <div class="footer-container">
+        <h3>Beauty Salon & Academy</h3>
+        <p>Luxury, Glamour, & Confidence</p>
+
+        <div class="footer-contact">
+            <p><strong>📍 Address:</strong> 123 Beauty Street, City, Country</p>
+            <p><strong>📞 Contact:</strong> <a href="tel:+1234567890">+1 234-567-890</a></p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#services">Services</a>
+            <a href="#courses">Courses</a>
+            <a href="#gallery">Gallery</a>
+            <a href="mailto:youremail@gmail.com">Email Us</a>
+        </div>
+        <p class="footer-copy">&copy; 2024 Salon Name. All Rights Reserved.</p>
+    </div>
+</footer>
+</html>
